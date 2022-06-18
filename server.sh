@@ -1,5 +1,4 @@
 #!/bin/bash
-SCRIPTPATH=$(dirname "$(readlink -f "$0")")
-$to_serve = ${1:-$SCRIPTPATH}
+to_serve=${1:-$(pwd -P)}
 
-php -S 0.0.0.0:8000 -t
+php -S 0.0.0.0:8001 -t "${to_serve}"
